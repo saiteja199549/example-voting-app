@@ -43,6 +43,7 @@ pipeline {
                     docker push 458494077457.dkr.ecr.us-east-1.amazonaws.com/voteapp:${BUILD_NUMBER}
                 '''
             }
+        }
         stage('Deploy') {
             steps {
                 sh '''
