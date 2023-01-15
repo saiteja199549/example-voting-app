@@ -28,8 +28,11 @@ pipeline {
 
     stages {
         stage('Git clone') {
+            steps{
             checkout scmGit(branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/saiteja199549/example-voting-app.git']])
 
+            }
+            
         }
         stage('Build') {
             steps {
